@@ -3,12 +3,18 @@
 Excel Fundamental es un programa que integra modelos termodinámicos en Microsoft Excel.  
 Está diseñado para evaluar estos modelos de forma vectorizada, permitiendo realizar cálculos eficientes directamente sobre tablas de Excel.
 
+![Imagen 1 mostrando el uso del programa](docs/imagenes/img10.png)
+
 Incluye una base de datos con propiedades termodinámicas de 468 compuestos químicos.  
 Los modelos pueden utilizarse directamente para los compuestos disponibles sin necesidad de ingresar manualmente sus propiedades.
 
----
+![Imagen 2 mostrando el uso del programa](docs/imagenes/img11.png)
 
-# Instalación del programa
+---
+## Indice
+- [Tutorial de instalación](#tutorial-de-instalación)
+
+## Tutorial de instalación
 
 La instalación consta de tres partes:
 
@@ -16,24 +22,19 @@ La instalación consta de tres partes:
 2. Instalar las librerías necesarias  
 3. Descargar y preparar el archivo de Excel  
 
----
-
-## 1. Instalar Python
+### 1. Instalar Python
 
 Descarga Python desde el sitio oficial:
-
 https://www.python.org/
 
 Durante la instalación aparecerá la siguiente casilla:
-
 ![img1](docs/imagenes/img1.png)
 
 Es importante que la actives.  
 Esto permite usar Python desde la terminal de Windows.
 
----
 
-## 2. Instalar librerías de Python
+### 2. Instalar librerías de Python
 
 Excel Fundamental utiliza:
 
