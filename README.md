@@ -3,16 +3,17 @@
 Excel Fundamental es un programa que integra modelos termodinámicos en Microsoft Excel.  
 Está diseñado para evaluar estos modelos de forma vectorizada, permitiendo realizar cálculos eficientes directamente sobre tablas de Excel.
 
-![Imagen 1 mostrando el uso del programa](docs/imagenes/img10.png)
+![Imagen 1 mostrando el uso del programa](docs/imagenes/img11.png)
 
 Incluye una base de datos con propiedades termodinámicas de 468 compuestos químicos.  
 Los modelos pueden utilizarse directamente para los compuestos disponibles sin necesidad de ingresar manualmente sus propiedades.
 
-![Imagen 2 mostrando el uso del programa](docs/imagenes/img11.png)
+![Imagen 2 mostrando el uso del programa](docs/imagenes/img10.png)
 
 ---
 ## Indice
 - [Tutorial de instalación](#tutorial-de-instalación)
+- [Tutorial de uso](#tutorial-de-uso)
 
 ## Tutorial de instalación
 
@@ -132,3 +133,5 @@ Marca la casilla **Desbloquear** y haz clic en **Aplicar**.
 ![img9](docs/imagenes/img9.png)
 
 Ahora puedes abrir el archivo normalmente.
+
+## Tutorial de uso
