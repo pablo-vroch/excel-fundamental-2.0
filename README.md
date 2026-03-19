@@ -12,8 +12,8 @@ Los modelos pueden utilizarse directamente para los compuestos disponibles sin n
 
 ---
 ## Indice
-- [Tutorial de instalación](#tutorial-de-instalación)
-- [Tutorial de uso](#tutorial-de-uso)
+- [Tutorial de instalación](docs/tutorial_de_instalacion.md)
+- [Tutorial de uso](docs/tutorial_de_uso.md)
 
 ## Tutorial de instalación
 
