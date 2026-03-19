@@ -87,9 +87,7 @@ Luego selecciona **Download ZIP**.
 
 ![img5](docs/imagenes/img5.png)
 
----
-
-### Extraer los archivos
+#### Extraer los archivos
 
 Haz clic derecho en el archivo:
 
@@ -99,9 +97,7 @@ Selecciona **Extraer todo**.
 
 ![img6](docs/imagenes/img6.png)
 
----
-
-### Abrir la aplicación
+#### Abrir la aplicación
 
 Ingresa a la carpeta:
 
