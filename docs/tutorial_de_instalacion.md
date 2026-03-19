@@ -12,7 +12,7 @@ Descarga Python desde el sitio oficial:
 https://www.python.org/
 
 Durante la instalación aparecerá la siguiente casilla:
-![img1](/imagenes/img1.png)
+![img1](imagenes/img1.png)
 
 Es importante que la actives.  
 Esto permite usar Python desde la terminal de Windows.
@@ -26,11 +26,11 @@ Estas librerías deben instalarse manualmente.
 
 - Haz clic en la pestaña **Buscar** de Windows.
 
-![img2](/imagenes/img2.png)
+![img2](imagenes/img2.png)
 
 - Escribe `Terminal`.
 
-![img3](/imagenes/img3.png)
+![img3](imagenes/img3.png)
 
 - Haz clic en la aplicación.
 
@@ -64,11 +64,11 @@ https://github.com/pablo-vroch/excel-fundamental
 
 Haz clic en el botón verde **Code**.
 
-![img4](/imagenes/img4.png)
+![img4](imagenes/img4.png)
 
 Luego selecciona **Download ZIP**.
 
-![img5](/imagenes/img5.png)
+![img5](imagenes/img5.png)
 
 ### Paso 2. Extraer los archivos
 
@@ -78,7 +78,7 @@ Haz clic derecho en el archivo:
 
 Selecciona **Extraer todo**.
 
-![img6](/imagenes/img6.png)
+![img6](imagenes/img6.png)
 
 ### Paso 3. Abrir la aplicación
 
@@ -86,7 +86,7 @@ Ingresa a la carpeta:
 
 `excel_fundamental_app`
 
-![img7](/imagenes/img7.png)
+![img7](imagenes/img7.png)
 
 Haz clic derecho en el archivo:
 
@@ -94,7 +94,7 @@ Haz clic derecho en el archivo:
 
 Selecciona **Propiedades**.
 
-![img8](docs/imagenes/img8.png)
+![img8](imagenes/img8.png)
 
 Marca la casilla **Desbloquear** y haz clic en **Aplicar**.
 
