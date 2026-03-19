@@ -19,11 +19,11 @@ Los modelos pueden utilizarse directamente para los compuestos disponibles sin n
 
 La instalación consta de tres partes:
 
-1. Instalar Python  
-2. Instalar las librerías necesarias  
-3. Descargar y preparar el archivo de Excel  
+Parte 1. Instalar Python  
+Parte 2. Instalar las librerías necesarias  
+Parte 3. Descargar y preparar el archivo de Excel  
 
-### 1. Instalar Python
+### Parte 1. Instalar Python
 
 Descarga Python desde el sitio oficial:
 https://www.python.org/
@@ -34,31 +34,24 @@ Durante la instalación aparecerá la siguiente casilla:
 Es importante que la actives.  
 Esto permite usar Python desde la terminal de Windows.
 
+### Parte 2. Instalar librerías de Python
 
-### 2. Instalar librerías de Python
-
-Excel Fundamental utiliza:
-
-- **NumPy** para los cálculos numéricos  
-- **xlwings** para la conexión con Excel  
-
+Excel Fundamental utiliza NumPy para cálculos numericos y Xlwings para conectarse a un libro de excel
 Estas librerías deben instalarse manualmente.
 
-### Abrir la terminal
+#### Paso 1. Abrir la terminal
 
-1. Haz clic en la pestaña **Buscar** de Windows.
+- Haz clic en la pestaña **Buscar** de Windows.
 
 ![img2](docs/imagenes/img2.png)
 
-2. Escribe `Terminal`.
+- Escribe `Terminal`.
 
 ![img3](docs/imagenes/img3.png)
 
-3. Haz clic en la aplicación.
+- Haz clic en la aplicación.
 
----
-
-### Instalar NumPy
+#### Paso 2. Instalar NumPy
 
 En la terminal escribe:
 
@@ -68,9 +61,7 @@ pip install numpy
 
 Presiona Enter y espera a que termine la instalación.
 
----
-
-### Instalar xlwings
+#### Paso 3. Instalar xlwings
 
 Después, escribe:
 
@@ -80,11 +71,9 @@ pip install xlwings
 
 Presiona Enter y espera a que termine.
 
----
+### Parte 3 (ultima). Instalar Excel Fundamental
 
-## 3. Instalar Excel Fundamental
-
-### Descargar el repositorio
+#### Paso 1. Descargar el repositorio
 
 Ingresa al siguiente enlace:
 
