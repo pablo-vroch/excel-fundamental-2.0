@@ -27,4 +27,33 @@ Se puede referenciar una propiedad termodinámica de dos formas: ID o nombre.
 
 ## Documentación de funciones
 En esta sección se muestra como usar todas las funciones disponibles en Excel Fundamental.
-Índice:
+
+**Contenido**
+
+**Funciones que acceden a la base de datos**
+- [Función obtener](#obtener)
+- [Funcion modificar_datos](#modificar_datos)
+
+**Ecuaciónes cúbicas de estado**
+
+## obtener
+## modificar_datos
+## van_der_waals
+## redlich_kwong
+## soave
+## peng_robinson
+## antoine
+## cp
+## integral_cp
+## coef_fugacidad_mezcla_peng_robinson
+## coef_fugacidad_mezcla_soave
+## coef_fugacidad_puro_peng_robinson
+## coef_fugacidad_puro_soave
+## unifac
+## poynting
+## entropia_ideal
+## entalpia_ideal
+## entalpia_ideal_vapor
+## integral_cp_entre_t
+
+
