@@ -31,12 +31,59 @@ En esta sección se muestra como usar todas las funciones disponibles en Excel F
 **Contenido**
 
 **Funciones que acceden a la base de datos**
-- [Función obtener](#obtener)
-- [Funcion modificar_datos](#modificar_datos)
+- [obtener](#obtener)
+- [modificar_datos](#modificar_datos)
 
 **Ecuaciónes cúbicas de estado**
+- [van_der_waals](#van_der_waals)
+- [redlich_kwong](#redlich_kwong)
+- [soave](#soave)
+- [peng_robinson](#peng_robinson)
+
+**Propiedades termodinámicas**
+- [antoine](#antoine)
+- [cp](#cp)
+- [integral_cp](#integral_cp)
+- [integral_cp_entre_t](#integral_cp_entre_t)
+
+**Fugacidad**
+- [coef_fugacidad_mezcla_peng_robinson](#coef_fugacidad_mezcla_peng_robinson)
+- [coef_fugacidad_mezcla_soave](#coef_fugacidad_mezcla_soave)
+- [coef_fugacidad_puro_peng_robinson](#coef_fugacidad_puro_peng_robinson)
+- [coef_fugacidad_puro_soave](#coef_fugacidad_puro_soave)
+
+**Modelos de actividad**
+- [unifac](#unifac)
+
+**Correcciones y propiedades energéticas**
+- [poynting](#poynting)
+- [entropia_ideal](#entropia_ideal)
+- [entalpia_ideal](#entalpia_ideal)
+- [entalpia_ideal_vapor](#entalpia_ideal_vapor)
 
 ## obtener
+
+> **obtener(compuestos, propiedades)**
+
+Busca propiedades termodinámicas en la base de datos y las imprime como tabla de Excel.
+
+### Parámetros:
+
+* **compuestos:** Lista de celdas que contienen una referencia a un compuesto químico.
+* **propiedades:** Lista de celdas que contienen una referencia a una propiedad termodinámica.
+
+### Devuelve:
+
+* **tabla de propiedades:** Tabla que contiene las propiedades seleccionadas de los compuestos seleccionados.
+
+
+### Ejemplo:
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/obtener_in.png) | ![Imagen Salida](imagenes/obtener_out.png) |
+
+
 ## modificar_datos
 ## van_der_waals
 ## redlich_kwong
