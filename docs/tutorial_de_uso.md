@@ -86,7 +86,7 @@ Busca propiedades termodinámicas en la base de datos y las imprime como tabla d
 
 ## modificar_datos
 
->**modificar_datos(compuestos, propiedades, valores)
+>**modificar_datos(compuestos, propiedades, valores)**
 
 Modifica temporalmente los valores de la base de datos.
 
@@ -108,6 +108,38 @@ Modifica temporalmente los valores de la base de datos.
 
 
 ## van_der_waals
+
+>**van_der_waals(compuestos, composiciones, presion, temperatura, volumen, raw)**
+
+Calcula la variable termodinámica faltante (P, T o V) utilizando la ecuación de estado de Van der Waals para una mezcla. Si se proporcionan las tres variables, la función actúa como un validador que evalúa si la relación se cumple o calcula el error relativo entre ellas.
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos de la mezcla.
+
+* **composiciones:** Lista de celdas que contienen las fracciones molares de cada compuesto en la mezcla
+
+* **presion:** (Opcional) Celda o rango de celdas con la presión absoluta en **bar**
+
+* **temperatura:** (Opcional) Celda o rango de celdas con la temperatura en **Kelvin**
+
+* **volumen:** (Opcional) Celda o rango de celdas con el volumen molar en **mL/mol**
+
+### Devuelve
+
+* **Variable calculada:** Si se omitió una variable (P, V, T), devuelve su valor calculandolo con la ecuación de Van der Waals.
+
+* **Validación / Error relativo:** Si se especificaron todas las variables, devuelve `True / False` dependiendo si esas varaibles satisfacen la ecuacion de estado de Van der Waals.
+
+### Ejemplo
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/van_der_waals_in.png) | ![Imagen Salida](imagenes/van_der_waals_out.png) |
+
+
+**Nota:** Esta funcion asume factores de interaccion binaria $k_{ij} = 0$.
+
 ## redlich_kwong
 ## soave
 ## peng_robinson
