@@ -85,6 +85,28 @@ Busca propiedades termodinámicas en la base de datos y las imprime como tabla d
 
 
 ## modificar_datos
+
+>**modificar_datos(compuestos, propiedades, valores)
+
+Modifica temporalmente los valores de la base de datos.
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a un compuesto químico.
+* **propiedades:** Lista de celdas que contienen una referencia a una propiedad termodinámica.
+* **valores:** Matriz de celdas que contienen los nuevos valores que se asignaran a cada compuesto para cada propiedad termodinámica.
+
+### Devuelve
+
+* **Texto:** La cadena "Datos Añadidos". Solo se muetra cuando se modifica la base exitosamente.
+
+### Ejemplo
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/modificar_datos_in.png) | ![Imagen Salida](imagenes/modificar_datos_out.png) |
+
+
 ## van_der_waals
 ## redlich_kwong
 ## soave
