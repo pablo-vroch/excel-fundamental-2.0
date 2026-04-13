@@ -65,7 +65,7 @@ def peng_robinson(compuestos, composiciones, presion, temperatura, volumen, raw=
 @xw.arg('compuestos', ndim=2)
 @xw.arg('presion', ndim=2)
 @xw.arg('temperatura', ndim=2)
-def antoine(compuestos, presion, temperatura, raw=False):
+def antoine(compuestos, presion, temperatura, raw=True):
     return interfaz_de_usuario.antoine(compuestos, presion_vapor=presion, temperatura=temperatura, raw=raw)
 
 @xw.func
