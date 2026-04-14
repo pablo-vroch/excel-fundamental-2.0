@@ -131,14 +131,32 @@ Calcula la variable termodinámica faltante (P, T o V) utilizando la ecuación d
 
 * **Validación / Error relativo:** Si se especificaron todas las variables, devuelve `True / False` dependiendo si esas varaibles satisfacen la ecuacion de estado de Van der Waals.
 
-### Ejemplo
+### Ejemplo 1 - Calculo de volumen molar
 
 | Entrada | Salida |
 | :--- | :--- |
-| ![Imagen Entrada](imagenes/van_der_waals_in.png) | ![Imagen Salida](imagenes/van_der_waals_out.png) |
+| ![Imagen Entrada](imagenes/van_der_waals_in_v.png) | ![Imagen Salida](imagenes/van_der_waals_out_v.png) |
 
+**Nota:** Es importante notar que cuando no se especifica el volumen al llamar la funcion, aun asi se coloca su respectiva coma.
+> van_der_waals(compuestos, composiciones, presion, temperatura,   )
 
-**Nota:** Esta funcion asume factores de interaccion binaria $k_{ij} = 0$.
+### Ejemplo 2 - Calculo de presión
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/van_der_waals_in_p.png) | ![Imagen Salida](imagenes/van_der_waals_out_p.png) |
+
+### Ejemplko 3 - Calculo de temperatura
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/van_der_waals_in_t.png) | ![Imagen Salida](imagenes/van_der_waals_out_t.png) |
+
+### Ejemplo 4 - Se especifican las tres variabes P, V, T.
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/van_der_waals_in_n.png) | ![Imagen Salida](imagenes/van_der_waals_out_n.png) |
 
 ## redlich_kwong
 ## soave
