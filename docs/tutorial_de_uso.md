@@ -210,7 +210,107 @@ Calcula la variable termodinámica faltante (P, T o V) utilizando la ecuación d
 | ![Imagen Entrada](imagenes/redlich_kwong_in_n.png) | ![Imagen Salida](imagenes/redlich_kwong_out_n.png) |
 
 ## soave
+
+> **soave(compuestos, composiciones, presion, temperatura, volumen)**
+
+Calcula la variable termodinámica faltante (P, T o V) utilizando la ecuación de estado de **Soave-Redlich-Kwong (SRK)** para una mezcla. Si se proporcionan las tres variables, la función actúa como un validador que evalúa si la relación se cumple o calcula el error relativo entre ellas.
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos de la mezcla.
+
+* **composiciones:** Lista de celdas que contienen las fracciones molares de cada compuesto en la mezcla.
+
+* **presion:** (Opcional) Celda o rango de celdas con la presión absoluta en **bar**.
+
+* **temperatura:** (Opcional) Celda o rango de celdas con la temperatura en **Kelvin**.
+
+* **volumen:** (Opcional) Celda o rango de celdas con el volumen molar en **mL/mol**.
+
+### Devuelve
+
+* **Variable calculada:** Si se omitió una variable (P, V, T), devuelve su valor calculándolo con la ecuación de Soave.
+
+* **Validación / Error relativo:** Si se especificaron todas las variables, devuelve el error relativo (como valor numérico) al verificar la consistencia de los datos ingresados.
+
+### Ejemplo 1 - Cálculo de volumen molar
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/soave_in_v.png) | ![Imagen Salida](imagenes/soave_out_v.png) |
+
+**Nota:** Es importante notar que cuando no se especifica el volumen al llamar la función, aun así se coloca su respectiva coma.
+> soave(compuestos, composiciones, presion, temperatura,   )
+
+### Ejemplo 2 - Cálculo de presión
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/soave_in_p.png) | ![Imagen Salida](imagenes/soave_out_p.png) |
+
+### Ejemplo 3 - Cálculo de temperatura
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/soave_in_t.png) | ![Imagen Salida](imagenes/soave_out_t.png) |
+
+### Ejemplo 4 - Se especifican las tres variables P, V, T.
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/soave_in_n.png) | ![Imagen Salida](imagenes/soave_out_n.png) |
+
 ## peng_robinson
+
+> **peng_robinson(compuestos, composiciones, presion, temperatura, volumen)**
+
+Calcula la variable termodinámica faltante (P, T o V) utilizando la ecuación de estado de **Peng-Robinson** para una mezcla. Si se proporcionan las tres variables, la función actúa como un validador que evalúa si la relación se cumple o calcula el error relativo entre ellas.
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos de la mezcla.
+
+* **composiciones:** Lista de celdas que contienen las fracciones molares de cada compuesto en la mezcla.
+
+* **presion:** (Opcional) Celda o rango de celdas con la presión absoluta en **bar**.
+
+* **temperatura:** (Opcional) Celda o rango de celdas con la temperatura en **Kelvin**.
+
+* **volumen:** (Opcional) Celda o rango de celdas con el volumen molar en **mL/mol**.
+
+### Devuelve
+
+* **Variable calculada:** Si se omitió una variable (P, V, T), devuelve su valor calculándolo con la ecuación de Peng-Robinson.
+
+* **Validación / Error relativo:** Si se especificaron todas las variables, devuelve el error relativo (como valor numérico) al verificar la consistencia de los datos ingresados.
+
+### Ejemplo 1 - Cálculo de volumen molar
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/peng_robinson_in_v.png) | ![Imagen Salida](imagenes/peng_robinson_out_v.png) |
+
+**Nota:** Es importante notar que cuando no se especifica el volumen al llamar la función, aun así se coloca su respectiva coma.
+> peng_robinson(compuestos, composiciones, presion, temperatura,   )
+
+### Ejemplo 2 - Cálculo de presión
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/peng_robinson_in_p.png) | ![Imagen Salida](imagenes/peng_robinson_out_p.png) |
+
+### Ejemplo 3 - Cálculo de temperatura
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/peng_robinson_in_t.png) | ![Imagen Salida](imagenes/peng_robinson_out_t.png) |
+
+### Ejemplo 4 - Se especifican las tres variables P, V, T.
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/peng_robinson_in_n.png) | ![Imagen Salida](imagenes/peng_robinson_out_n.png) |
+
 ## antoine
 ## cp
 ## integral_cp
