@@ -72,7 +72,7 @@ def antoine(compuestos, presion, temperatura, raw=True):
 @xw.arg('compuestos', ndim=2)
 @xw.arg('temperatura', ndim=2)
 @xw.arg('capacidad_calorifica', ndim=2)
-def cp(compuestos, temperatura, capacidad_calorifica, raw=False):
+def cp(compuestos, temperatura, capacidad_calorifica, raw=True):
     return interfaz_de_usuario.cp(compuestos, temperatura=temperatura, capacidad_calorifica=capacidad_calorifica, raw=raw)
 
 @xw.func
@@ -80,7 +80,7 @@ def cp(compuestos, temperatura, capacidad_calorifica, raw=False):
 @xw.arg('temperatura1', ndim=2)
 @xw.arg('temperatura2', ndim=2)
 @xw.arg('deltah', ndim=2)
-def integral_cp(compuestos, temperatura1, temperatura2, deltah, raw=False):
+def integral_cp(compuestos, temperatura1, temperatura2, deltah, raw=True):
     return interfaz_de_usuario.integral_cp(compuestos, temperatura1=temperatura1, temperatura2=temperatura2, delta_h=deltah, raw=raw)
 
 @xw.func
@@ -89,7 +89,7 @@ def integral_cp(compuestos, temperatura1, temperatura2, deltah, raw=False):
 @xw.arg('presion', ndim=2)
 @xw.arg('temperatura', ndim=2)
 @xw.arg('raiz_volumen', ndim=2)
-def coef_fugacidad_mezcla_peng_robinson(compuestos, composiciones, presion, temperatura, raiz_volumen, raw=False):
+def coef_fugacidad_mezcla_peng_robinson(compuestos, composiciones, presion, temperatura, raiz_volumen, raw=True):
     return interfaz_de_usuario.coeficiente_fugacidad_mezcla_peng_robinson(compuestos, composiciones, presion=presion, temperatura=temperatura, raiz_volumen=raiz_volumen, raw=raw)
 
 @xw.func
@@ -98,7 +98,7 @@ def coef_fugacidad_mezcla_peng_robinson(compuestos, composiciones, presion, temp
 @xw.arg('presion', ndim=2)
 @xw.arg('temperatura', ndim=2)
 @xw.arg('raiz_volumen', ndim=2)
-def coef_fugacidad_mezcla_soave(compuestos, composiciones, presion, temperatura, raiz_volumen, raw=False):
+def coef_fugacidad_mezcla_soave(compuestos, composiciones, presion, temperatura, raiz_volumen, raw=True):
     return interfaz_de_usuario.coeficiente_fugacidad_mezcla_soave(compuestos, composiciones, presion=presion, temperatura=temperatura, raiz_volumen=raiz_volumen, raw=raw)
 
 @xw.func
@@ -106,7 +106,7 @@ def coef_fugacidad_mezcla_soave(compuestos, composiciones, presion, temperatura,
 @xw.arg('presion', ndim=2)
 @xw.arg('temperatura', ndim=2)
 @xw.arg('raiz_volumen', ndim=2)
-def coef_fugacidad_puro_peng_robinson(compuestos, presion, temperatura, raiz_volumen, raw=False):
+def coef_fugacidad_puro_peng_robinson(compuestos, presion, temperatura, raiz_volumen, raw=True):
     return interfaz_de_usuario.coeficiente_fugacidad_puro_peng_robinson(compuestos, presion, temperatura, raiz_volumen=raiz_volumen, raw=raw)
 
 @xw.func
@@ -114,7 +114,7 @@ def coef_fugacidad_puro_peng_robinson(compuestos, presion, temperatura, raiz_vol
 @xw.arg('presion', ndim=2)
 @xw.arg('temperatura', ndim=2)
 @xw.arg('raiz_volumen', ndim=2)
-def coef_fugacidad_puro_soave(compuestos, presion, temperatura, raiz_volumen, raw=False):
+def coef_fugacidad_puro_soave(compuestos, presion, temperatura, raiz_volumen, raw=True):
     return interfaz_de_usuario.coeficiente_fugacidad_puro_soave(compuestos, presion, temperatura, raiz_volumen=raiz_volumen, raw=raw)
 
 @xw.func
@@ -131,7 +131,7 @@ def unifac(composiciones, temperatura, grupos, r, q, aij):
 @xw.arg('compuestos', ndim=2)
 @xw.arg('presion', ndim=2)
 @xw.arg('temperatura', ndim=2)
-def poynting(compuestos, presion, temperatura, raw=False):
+def poynting(compuestos, presion, temperatura, raw=True):
     return interfaz_de_usuario.correccion_poynting(compuestos, presion, temperatura, raw=raw)
 
 @xw.func
@@ -165,5 +165,5 @@ def entalpia_ideal_vapor(compuestos, composiciones, temperatura):
 @xw.arg('temperatura_1', ndim=2)
 @xw.arg('temperatura_2', ndim=2)
 @xw.arg('valor_integral', ndim=2)
-def integral_cp_entre_t(compuestos, temperatura_1, temperatura_2, valor_integral, raw=False):
+def integral_cp_entre_t(compuestos, temperatura_1, temperatura_2, valor_integral, raw=True):
     return interfaz_de_usuario.integral_cp_entre_t(compuestos, temperatura_1=temperatura_1, temperatura_2=temperatura_2, valor_int=valor_integral, raw=raw)
