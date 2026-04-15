@@ -356,6 +356,52 @@ Calcula la presión de saturación ($P_{sat}$) o la temperatura de saturación (
 | ![Imagen Entrada](imagenes/antoine_in_m.png) | ![Imagen Salida](imagenes/antoine_out_m.png) |
 
 ## cp
+
+> **cp(compuestos, temperatura, valor_cp, raw)**
+
+Calcula la capacidad calorífica a presión constante ($C_p$) para un gas ideal a una temperatura dada, o determina la temperatura necesaria para alcanzar un valor de $C_p$ específico. Al ser una función matricial, permite procesar múltiples compuestos y condiciones simultáneamente.
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos (ID, CAS, nombre IUPAC o común).
+
+* **temperatura:** (Opcional) Celda o rango de celdas con la temperatura en **Kelvin**.
+
+* **valor_cp:** (Opcional) Celda o rango de celdas con el valor de la capacidad calorífica en **J/mol·K**.
+
+* **raw:** (Opcional) Valor booleano. Por defecto es `True`. 
+    * Si es `True`, la función realiza el cálculo directamente usando las constantes del *Data Bank*. 
+    * Si es `False`, la función verifica si la temperatura se encuentra dentro del rango de validez reportado para el modelo polinomial. Si está fuera de rango, devolverá una advertencia.
+    * A diferencia de los argumentos de `temperatura` o `valor_cp`, para el argumento `raw` no es necesario incluir comas adicionales.
+
+### Devuelve
+
+* **Variable calculada:** El valor de $C_p$ o de la Temperatura según el argumento que se haya omitido en la llamada.
+
+### Ejemplo 1 - Cálculo de capacidad calorífica ($C_p$)
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/cp_in_cp.png) | ![Imagen Salida](imagenes/cp_out_cp.png) |
+
+**Nota:** Para calcular el $C_p$, se debe dejar el espacio del tercer argumento vacío respetando la coma.
+> cp(compuestos, temperatura,  )
+
+### Ejemplo 2 - Cálculo de temperatura ($T$)
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/cp_in_t.png) | ![Imagen Salida](imagenes/cp_out_t.png) |
+
+**Nota:** Para calcular la temperatura, se debe dejar el espacio del segundo argumento vacío respetando la coma.
+> cp(compuestos,  , valor_cp)
+
+### Ejemplo 3 - Uso del parámetro `raw` (Desactivar límites de la base de datos)
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/cp_in_m.png) | ![Imagen Salida](imagenes/cp_out_m.png) |
+
 ## integral_cp
 ## coef_fugacidad_mezcla_peng_robinson
 ## coef_fugacidad_mezcla_soave
