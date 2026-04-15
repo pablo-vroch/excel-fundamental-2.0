@@ -146,7 +146,7 @@ Calcula la variable termodinámica faltante (P, T o V) utilizando la ecuación d
 | :--- | :--- |
 | ![Imagen Entrada](imagenes/van_der_waals_in_p.png) | ![Imagen Salida](imagenes/van_der_waals_out_p.png) |
 
-### Ejemplko 3 - Calculo de temperatura
+### Ejemplo 3 - Calculo de temperatura
 
 | Entrada | Salida |
 | :--- | :--- |
