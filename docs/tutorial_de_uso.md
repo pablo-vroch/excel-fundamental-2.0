@@ -312,6 +312,49 @@ Calcula la variable termodinámica faltante (P, T o V) utilizando la ecuación d
 | ![Imagen Entrada](imagenes/peng_robinson_in_n.png) | ![Imagen Salida](imagenes/peng_robinson_out_n.png) |
 
 ## antoine
+
+> **antoine(compuestos, presion, temperatura, raw)**
+
+Calcula la presión de saturación ($P_{sat}$) o la temperatura de saturación ($T_{sat}$) utilizando la ecuación de Antoine. Esta función es matricial, permitiendo realizar cálculos para múltiples compuestos y condiciones simultáneamente. 
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos (ID, CAS, nombre IUPAC o común).
+
+* **presion:** (Opcional) Celda o rango de celdas con la presión absoluta en **bar**.
+
+* **temperatura:** (Opcional) Celda o rango de celdas con la temperatura en **Kelvin**.
+
+* **raw:** (Opcional) Valor booleano. Por defecto es `True`. 
+    * Si es `True`, la función realiza el cálculo directamente. 
+    * Si es `False`, la función verifica si las condiciones de entrada están dentro del rango de temperatura o presión reportado en el *Data Bank*. Si los valores están fuera de rango, la función devolverá una advertencia en lugar del cálculo. 
+    * Para este argumento **NO** es necesario incluir sus respectivas comas al llamar la funcion
+
+### Devuelve
+
+* **Variable calculada:** El valor de la presión de saturación o temperatura de saturación según el argumento omitido.
+
+### Ejemplo 1 - Cálculo de presión de saturación ($P_{sat}$)
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/antoine_in_p.png) | ![Imagen Salida](imagenes/antoine_out_p.png) |
+
+**Nota:** Es importante notar que cuando se omite la presión para calcularla, se debe respetar el espacio del argumento mediante la coma.
+> antoine(compuestos,  , temperatura)
+
+### Ejemplo 2 - Cálculo de temperatura de saturación ($T_{sat}$)
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/antoine_in_t.png) | ![Imagen Salida](imagenes/antoine_out_t.png) |
+
+### Ejemplo 3 - Uso del parámetro `raw`. 
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/antoine_in_m.png) | ![Imagen Salida](imagenes/antoine_out_m.png) |
+
 ## cp
 ## integral_cp
 ## coef_fugacidad_mezcla_peng_robinson
