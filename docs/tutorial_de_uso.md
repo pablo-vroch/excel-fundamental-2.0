@@ -451,6 +451,55 @@ Calcula la integral de la capacidad calorífica a presión constante ($\int_{T_1
 | :--- | :--- |
 | ![Imagen Entrada](imagenes/integral_cp_in_m.png) | ![Imagen Salida](imagenes/integral_cp_out_m.png) |
 
+## integral_cp_entre_t
+
+> **integral_cp_entre_t(compuestos, temperatura_1, temperatura_2, valor_int, raw)**
+
+Calcula la integral de la capacidad calorífica dividida entre la temperatura ($\int_{T_1}^{T_2} \frac{C_p}{T} dT$) para un gas ideal. Esta función es fundamental para cálculos de cambio de entropía y permite resolver tanto el valor de la integral como cualquiera de las temperaturas límites ($T_1$ o $T_2$) si se dejan como incógnitas.
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos (ID, CAS, nombre IUPAC o común).
+
+* **temperatura_1:** (Opcional) Celda o rango de celdas con la temperatura inicial en **Kelvin**.
+
+* **temperatura_2:** (Opcional) Celda o rango de celdas con la temperatura final en **Kelvin**.
+
+* **valor_int:** (Opcional) Celda o rango de celdas con el valor de la integral ($\int \frac{C_p}{T} dT$) en **J/mol·K**.
+
+* **raw:** (Opcional) Valor booleano. Por defecto es `True`. 
+    * Si es `True`, la función realiza el cálculo directamente. 
+    * Si es `False`, la función verifica si las temperaturas se encuentran dentro del rango de validez reportado en el *Data Bank*. 
+    * A diferencia de los argumentos de temperatura o el valor de la integral, para el argumento `raw` no es necesario incluir comas adicionales.
+
+### Devuelve
+
+* **Variable calculada:** El valor de la integral, la temperatura inicial ($T_1$) o la temperatura final ($T_2$), según el argumento que se haya omitido en la llamada.
+
+### Ejemplo 1 - Cálculo del valor de la integral
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/integral_cp_entre_t_in_int.png) | ![Imagen Salida](imagenes/integral_cp_entre_t_out_int.png) |
+
+**Nota:** Para calcular el valor de la integral, se debe dejar el espacio del cuarto argumento vacío respetando la coma.
+> integral_cp_entre_t(compuestos, temperatura_1, temperatura_2,  )
+
+### Ejemplo 2 - Cálculo de temperatura ($T_2$)
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/integral_cp_entre_t_in_t.png) | ![Imagen Salida](imagenes/integral_cp_entre_t_out_t.png) |
+
+**Nota:** Para calcular una temperatura (incógnita), se debe dejar su espacio vacío respetando la coma correspondiente.
+> integral_cp_entre_t(compuestos, temperatura_1,  , valor_int)
+
+### Ejemplo 3 - Uso del parámetro `raw`
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/integral_cp_entre_t_in_m.png) | ![Imagen Salida](imagenes/integral_cp_entre_t_out_m.png) |
+
 ## coef_fugacidad_mezcla_peng_robinson
 ## coef_fugacidad_mezcla_soave
 ## coef_fugacidad_puro_peng_robinson
@@ -460,6 +509,5 @@ Calcula la integral de la capacidad calorífica a presión constante ($\int_{T_1
 ## entropia_ideal
 ## entalpia_ideal
 ## entalpia_ideal_vapor
-## integral_cp_entre_t
 
 
