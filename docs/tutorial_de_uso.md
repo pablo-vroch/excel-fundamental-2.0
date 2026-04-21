@@ -565,6 +565,35 @@ Calcula los coeficientes de fugacidad ($\phi_i$) para cada componente en una mez
 | ![Imagen Entrada](imagenes/coef_fugacidad_mezcla_soave_in.png) | ![Imagen Salida](imagenes/coef_fugacidad_mezcla_soave_out.png) |
 
 ## coef_fugacidad_puro_peng_robinson
+
+> **coef_fugacidad_puro_peng_robinson(compuestos, presion, temperatura, raiz_volumen)**
+
+Calcula el coeficiente de fugacidad ($\phi$) para compuestos puros utilizando la ecuación de estado de **Peng-Robinson**. Esta función permite evaluar la desviación del comportamiento ideal de un compuesto individual en la fase seleccionada.
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos.
+
+* **presion:** Celda o rango de celdas con la presión absoluta en **bar**.
+
+* **temperatura:** Celda o rango de celdas con la temperatura en **Kelvin**.
+
+* **raiz_volumen:** Número entero (1, 2 o 3) que selecciona la raíz del polinomio:
+    * **1:** Raíz de menor volumen (Fase Líquida).
+    * **2:** Raíz intermedia (Fase Metaestable).
+    * **3:** Raíz de mayor volumen (Fase Vapor).
+    * *Nota:* La ecuación normalmente devuelve tres raíces, pero puede devolver una única raíz de volumen. Si este es el caso y se selecciona una raíz diferente a la 1, la función no devolverá nada.
+
+### Devuelve
+
+* **Coeficiente de fugacidad:** El valor de $\phi$ para cada compuesto puro bajo las condiciones especificadas.
+
+### Ejemplo
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/coef_fugacidad_puro_peng_robinson_in.png) | ![Imagen Salida](imagenes/coef_fugacidad_puro_peng_robinson_out.png) |
+
 ## coef_fugacidad_puro_soave
 ## unifac
 ## poynting
