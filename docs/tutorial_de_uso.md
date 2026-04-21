@@ -625,9 +625,41 @@ Calcula el coeficiente de fugacidad ($\phi$) para compuestos puros utilizando la
 | ![Imagen Entrada](imagenes/coef_fugacidad_puro_soave_in.png) | ![Imagen Salida](imagenes/coef_fugacidad_puro_soave_out.png) |
 
 ## unifac
+
+> **unifac(composiciones, temperatura, num_grupos, r_mayus, q_mayus, a_ij)**
+
+Calcula los coeficientes de actividad ($\gamma_i$) de cada compuesto en una mezcla líquida utilizando el modelo **UNIFAC**. Este modelo predice la no idealidad de la fase líquida basándose en las interacciones entre los grupos funcionales que constituyen las moléculas.
+
+### Parámetros
+
+* **composiciones:** Lista de celdas que contienen las fracciones molares de cada compuesto en la mezcla líquida.
+* **temperatura:** Celda o rango de celdas con la temperatura en **Kelvin**.
+* **num_grupos:** Matriz de tamaño ($C \times K$) que indica el número de instancias del grupo funcional $K$ en el compuesto $C$. 
+    * *Formato estricto:* Las filas deben corresponder a los compuestos y las columnas a los grupos funcionales.
+* **r_mayus:** Rango de celdas ($1 \times K$) con las constantes $R$ (volumen relativo) de cada grupo funcional.
+* **q_mayus:** Rango de celdas ($1 \times K$) con las constantes $Q$ (área superficial relativa) de cada grupo funcional.
+* **a_ij:** Matriz cuadrada ($K \times K$) de parámetros de interacción energética entre los grupos funcionales.
+
+### Notas Importantes sobre el Formato
+
+A diferencia de otras funciones de Excel Fundamental, los parámetros específicos del modelo UNIFAC (`num_grupos`, `r_mayus`, `q_mayus` y `a_ij`) **no admiten transposición**. Deben alimentarse a la función respetando rigurosamente su orientación de filas y columnas:
+* **num_grupos:** Compuestos en filas, Grupos en columnas.
+* **r_mayus / q_mayus:** Siempre en formato de fila (1 fila, K columnas).
+* **a_ij:** Matriz de interacción donde la posición $(i, j)$ representa la interacción del grupo $i$ con el grupo $j$.
+
+Los argumentos de `composiciones` y `temperatura` sí conservan la flexibilidad habitual para adaptarse a la disposición de los datos en la hoja de cálculo.
+
+### Devuelve
+
+* **Coeficientes de actividad:** Una matriz con los valores de $\gamma_i$ para cada compuesto a cada condición de temperatura especificada.
+
+### Ejemplo
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/unifac_in.png) | ![Imagen Salida](imagenes/unifac_out.png) |
+
 ## poynting
 ## entropia_ideal
 ## entalpia_ideal
 ## entalpia_ideal_vapor
-
-
