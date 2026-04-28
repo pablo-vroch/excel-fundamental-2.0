@@ -25,6 +25,8 @@ Se puede referenciar una propiedad termodinámica de dos formas: ID o nombre.
 |**Nombre**|Nombre de la propiedad termodinámica (existen muchos nombres para una sola propiedad)|Temperatura critica, Tc, Critical Temperature|
 |**ID**|Posición de la propiedad en la base de datos|6|
 
+Los nombres disponibles para propiedades termodinamicas se encuentran aquí **[nombres disponibles](nombres_propiedades.md)**
+
 ## Documentación de funciones
 En esta sección se muestra como usar todas las funciones disponibles en Excel Fundamental.
 
