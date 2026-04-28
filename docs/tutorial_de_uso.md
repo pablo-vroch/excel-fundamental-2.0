@@ -724,4 +724,36 @@ Donde:
 | ![Imagen Entrada](imagenes/entropia_ideal_in.png) | ![Imagen Salida](imagenes/entropia_ideal_out.png) |
 
 ## entalpia_ideal
+
+> **entalpia_ideal(compuestos, composiciones_liq, composiciones_vap, temperatura, calidad_vapor)**
+
+Calcula la entalpía molar total de un sistema bajo las suposiciones de gas ideal para la fase vapor y solución ideal para la fase líquida. Bajo este modelo, la entalpía del sistema es independiente de la presión.
+
+Matemáticamente, la entalpía total se define como:
+
+$$H_{total} = q \cdot H_{V} + (1 - q) \cdot H_{L}$$
+
+Donde:
+* $H_{V} = \sum y_i H_{i, V}(T)$ es la entalpía de la mezcla gaseosa ideal.
+* $H_{L} = \sum x_i H_{i, L}(T)$ es la entalpía de la mezcla líquida ideal.
+* $q$ es la calidad de vapor (fracción molar de vapor).
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos (ID, CAS, nombre IUPAC o común).
+* **composiciones_liq:** Lista de celdas con las fracciones molares de la fase líquida ($x_i$).
+* **composiciones_vap:** Lista de celdas con las fracciones molares de la fase vapor ($y_i$).
+* **temperatura:** Celda o rango de celdas con la temperatura del sistema en **Kelvin**.
+* **calidad_vapor:** Celda o rango de celdas con la fracción molar de vapor ($q$), con valores entre 0 y 1.
+
+### Devuelve
+
+* **Entalpía ideal:** El valor de la entalpía molar del sistema en **J/mol**.
+
+### Ejemplo
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/entalpia_ideal_in.png) | ![Imagen Salida](imagenes/entalpia_ideal_out.png) |
+
 ## entalpia_ideal_vapor
