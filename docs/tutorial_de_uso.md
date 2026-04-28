@@ -660,6 +660,35 @@ Los argumentos de `composiciones` y `temperatura` sí conservan la flexibilidad 
 | ![Imagen Entrada](imagenes/unifac_in.png) | ![Imagen Salida](imagenes/unifac_out.png) |
 
 ## poynting
+
+> **poynting(compuestos, presion, temperatura)**
+
+Calcula el **factor de Poynting**, el cual representa la corrección de la fugacidad de una fase líquida debido a la diferencia entre la presión del sistema y la presión de saturación del compuesto.
+
+Matemáticamente, para un líquido incompresible, se define como:
+
+$$\mathcal{P} = \exp \left( \frac{V_L (P - P_{sat})}{RT} \right)$$
+
+Donde $V_L$ es el volumen molar del líquido, $P$ es la presión del sistema, $P_{sat}$ es la presión de saturación a la temperatura $T$, y $R$ es la constante de los gases.
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos (ID, CAS, nombre IUPAC o común).
+
+* **presion:** Celda o rango de celdas con la presión absoluta del sistema en **bar**.
+
+* **temperatura:** Celda o rango de celdas con la temperatura del sistema en **Kelvin**.
+
+### Devuelve
+
+* **Factor de Poynting:** El valor adimensional resultante de la corrección por presión para cada compuesto.
+
+### Ejemplo
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/poynting_in.png) | ![Imagen Salida](imagenes/poynting_out.png) |
+
 ## entropia_ideal
 ## entalpia_ideal
 ## entalpia_ideal_vapor
