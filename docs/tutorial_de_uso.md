@@ -757,3 +757,29 @@ Donde:
 | ![Imagen Entrada](imagenes/entalpia_ideal_in.png) | ![Imagen Salida](imagenes/entalpia_ideal_out.png) |
 
 ## entalpia_ideal_vapor
+
+> **entalpia_ideal_vapor(compuestos, composiciones_vap, temperatura)**
+
+Calcula la entalpía molar de una mezcla gaseosa bajo la suposición de comportamiento de gas ideal. En este modelo, la entalpía depende exclusivamente de la temperatura y de la composición de la mezcla.
+
+Matemáticamente, se define como:
+
+$$H_{V} = \sum y_i H_{i, V}(T)$$
+
+Donde $H_{i, V}(T)$ es la entalpía molar del componente $i$ en estado de gas ideal a la temperatura $T$, y $y_i$ es su fracción molar en la fase vapor.
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos (ID, CAS, nombre IUPAC o común).
+* **composiciones_vap:** Lista de celdas con las fracciones molares de la fase vapor ($y_i$).
+* **temperatura:** Celda o rango de celdas con la temperatura del sistema en **Kelvin**.
+
+### Devuelve
+
+* **Entalpía ideal del vapor:** El valor de la entalpía molar de la mezcla gaseosa en **J/mol**.
+
+### Ejemplo
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/entalpia_ideal_vapor_in.png) | ![Imagen Salida](imagenes/entalpia_ideal_vapor_out.png) |
