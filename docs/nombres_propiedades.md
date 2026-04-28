@@ -1,6 +1,7 @@
 ### Diccionario de Propiedades Termodinámicas (Data Bank)
 
 Esta tabla contiene todas las propiedades que pueden extraerse de la base de datos. Para llamar a una propiedad en una función, se puede utilizar cualquiera de los términos listados en la columna **Formas de referenciar**.
+Es importante considerar que las formas de referenciar son flexibles, son indiferentes a espacios, mayusculas, acentos y guiones.
 
 | Propiedad | Símbolo | Formas de referenciar |
 | :--- | :---: | :--- |
