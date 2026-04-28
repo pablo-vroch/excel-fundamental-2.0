@@ -690,5 +690,38 @@ Donde $V_L$ es el volumen molar del líquido, $P$ es la presión del sistema, $P
 | ![Imagen Entrada](imagenes/poynting_in.png) | ![Imagen Salida](imagenes/poynting_out.png) |
 
 ## entropia_ideal
+
+> **entropia_ideal(compuestos, composiciones_liq, composiciones_vap, presion, temperatura, calidad_vapor)**
+
+Calcula la entropía molar total de un sistema en equilibrio (o de una sola fase) bajo la suposición de comportamiento de gas ideal para la fase vapor y solución ideal para la fase líquida.
+
+Matemáticamente, la entropía total del sistema se define como:
+
+$$S_{total} = q \cdot S_{V} + (1 - q) \cdot S_{L}$$
+
+Donde:
+* $S_{V} = \sum y_i S_{i, V}(T, P) - R \sum y_i \ln y_i$ es la entropía de la mezcla gaseosa ideal.
+* $S_{L} = \sum x_i S_{i, L}(T) - R \sum x_i \ln x_i$ es la entropía de la mezcla líquida ideal.
+* $q$ es la calidad de vapor (fracción molar de vapor).
+
+### Parámetros
+
+* **compuestos:** Lista de celdas que contienen una referencia a los compuestos químicos (ID, CAS, nombre IUPAC o común).
+* **composiciones_liq:** Lista de celdas con las fracciones molares de la fase líquida ($x_i$).
+* **composiciones_vap:** Lista de celdas con las fracciones molares de la fase vapor ($y_i$).
+* **presion:** Celda o rango de celdas con la presión absoluta en **bar**.
+* **temperatura:** Celda o rango de celdas con la temperatura en **Kelvin**.
+* **calidad_vapor:** Celda o rango de celdas con la fracción molar de vapor ($q$), con valores entre 0 y 1.
+
+### Devuelve
+
+* **Entropía ideal:** El valor de la entropía molar del sistema en **J/mol·K**.
+
+### Ejemplo
+
+| Entrada | Salida |
+| :--- | :--- |
+| ![Imagen Entrada](imagenes/entropia_ideal_in.png) | ![Imagen Salida](imagenes/entropia_ideal_out.png) |
+
 ## entalpia_ideal
 ## entalpia_ideal_vapor
